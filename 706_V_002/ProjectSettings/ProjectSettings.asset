@@ -135,7 +135,10 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -154,6 +157,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Standalone: com.DefaultCompany.TemplateHD
+    iPhone: phoneCamera
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -699,7 +703,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   cloudProjectId: fce2f5dd-e58f-491b-a3a4-174abaa578d2
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
