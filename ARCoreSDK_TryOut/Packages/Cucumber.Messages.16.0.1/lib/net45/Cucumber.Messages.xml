@@ -1,0 +1,1353 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cucumber.Messages</name>
+    </assembly>
+    <members>
+        <member name="T:Io.Cucumber.Messages.MessagesReflection">
+            <summary>Holder for reflection information generated from messages.proto</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.MessagesReflection.Descriptor">
+            <summary>File descriptor for messages.proto</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Envelope">
+             <summary>
+            *
+             All the messages that are passed between different components/processes are Envelope
+             messages.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.SourceFieldNumber">
+            <summary>Field number for the "source" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Envelope.Source">
+            <summary>
+            Gherkin
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.GherkinDocumentFieldNumber">
+            <summary>Field number for the "gherkin_document" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.PickleFieldNumber">
+            <summary>Field number for the "pickle" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Envelope.Pickle">
+            <summary>
+            Compiler(s)
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.StepDefinitionFieldNumber">
+            <summary>Field number for the "step_definition" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Envelope.StepDefinition">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.HookFieldNumber">
+            <summary>Field number for the "hook" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.ParameterTypeFieldNumber">
+            <summary>Field number for the "parameter_type" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.TestCaseFieldNumber">
+            <summary>Field number for the "test_case" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.UndefinedParameterTypeFieldNumber">
+            <summary>Field number for the "undefined_parameter_type" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.TestRunStartedFieldNumber">
+            <summary>Field number for the "test_run_started" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Envelope.TestRunStarted">
+            <summary>
+            Execution
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.TestCaseStartedFieldNumber">
+            <summary>Field number for the "test_case_started" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.TestStepStartedFieldNumber">
+            <summary>Field number for the "test_step_started" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.AttachmentFieldNumber">
+            <summary>Field number for the "attachment" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.TestStepFinishedFieldNumber">
+            <summary>Field number for the "test_step_finished" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.TestCaseFinishedFieldNumber">
+            <summary>Field number for the "test_case_finished" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.TestRunFinishedFieldNumber">
+            <summary>Field number for the "test_run_finished" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.ParseErrorFieldNumber">
+            <summary>Field number for the "parse_error" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Envelope.ParseError">
+            <summary>
+            Parsing
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Envelope.MetaFieldNumber">
+            <summary>Field number for the "meta" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Envelope.MessageOneofCase">
+            <summary>Enum of possible cases for the "message" oneof.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Meta">
+             <summary>
+            *
+             This message contains meta information about the environment. Consumers can use
+             this for various purposes.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.ProtocolVersionFieldNumber">
+            <summary>Field number for the "protocol_version" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.ProtocolVersion">
+             <summary>
+            *
+             The [SEMVER](https://semver.org/) version number of the protocol
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.ImplementationFieldNumber">
+            <summary>Field number for the "implementation" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Implementation">
+            <summary>
+            SpecFlow, Cucumber-JVM, Cucumber.js, Cucumber-Ruby, Behat etc.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.RuntimeFieldNumber">
+            <summary>Field number for the "runtime" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Runtime">
+            <summary>
+            Java, Ruby, Node.js etc
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.OsFieldNumber">
+            <summary>Field number for the "os" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Os">
+            <summary>
+            Windows, Linux, MacOS etc
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.CpuFieldNumber">
+            <summary>Field number for the "cpu" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Cpu">
+            <summary>
+            386, arm, amd64 etc
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.CiFieldNumber">
+            <summary>Field number for the "ci" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Ci">
+            <summary>
+            CI environment
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Meta.Types">
+            <summary>Container for nested types declared in the Meta message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Meta.Types.Product">
+            <summary>
+            A product has a name and a version
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.Product.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Types.Product.Name">
+            <summary>
+            The product name
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.Product.VersionFieldNumber">
+            <summary>Field number for the "version" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Types.Product.Version">
+            <summary>
+            The product version
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.CI.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Types.CI.Name">
+            <summary>
+            Name of the CI product, e.g. "Jenkins", "CircleCI" etc.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.CI.UrlFieldNumber">
+            <summary>Field number for the "url" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Types.CI.Url">
+            <summary>
+            Link to the build
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.CI.GitFieldNumber">
+            <summary>Field number for the "git" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Meta.Types.CI.Git">
+            <summary>
+            Information about Git, provided by the Build/CI server as environment
+            variables.
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Meta.Types.CI.Types">
+            <summary>Container for nested types declared in the CI message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.CI.Types.Git.RemoteFieldNumber">
+            <summary>Field number for the "remote" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.CI.Types.Git.RevisionFieldNumber">
+            <summary>Field number for the "revision" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.CI.Types.Git.BranchFieldNumber">
+            <summary>Field number for the "branch" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Meta.Types.CI.Types.Git.TagFieldNumber">
+            <summary>Field number for the "tag" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Timestamp">
+            <summary>
+            From https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Timestamp.SecondsFieldNumber">
+            <summary>Field number for the "seconds" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Timestamp.Seconds">
+            <summary>
+            Represents seconds of UTC time since Unix epoch
+            1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to
+            9999-12-31T23:59:59Z inclusive.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Timestamp.NanosFieldNumber">
+            <summary>Field number for the "nanos" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Timestamp.Nanos">
+            <summary>
+            Non-negative fractions of a second at nanosecond resolution. Negative
+            second values with fractions must still have non-negative nanos values
+            that count forward in time. Must be from 0 to 999,999,999
+            inclusive.
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Duration">
+            <summary>
+            The structure is pretty close of the Timestamp one. For clarity, a second type
+            of message is used.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Duration.SecondsFieldNumber">
+            <summary>Field number for the "seconds" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Duration.NanosFieldNumber">
+            <summary>Field number for the "nanos" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Duration.Nanos">
+            <summary>
+            Non-negative fractions of a second at nanosecond resolution. Negative
+            second values with fractions must still have non-negative nanos values
+            that count forward in time. Must be from 0 to 999,999,999
+            inclusive.
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Location">
+             <summary>
+            *
+             Points to a line and a column in a text file
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Location.LineFieldNumber">
+            <summary>Field number for the "line" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Location.ColumnFieldNumber">
+            <summary>Field number for the "column" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.SourceReference">
+             <summary>
+            *
+             Points to a [Source](#io.cucumber.messages.Source) identified by `uri` and a
+             [Location](#io.cucumber.messages.Location) within that file.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.UriFieldNumber">
+            <summary>Field number for the "uri" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.JavaMethodFieldNumber">
+            <summary>Field number for the "java_method" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.JavaStackTraceElementFieldNumber">
+            <summary>Field number for the "java_stack_trace_element" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.SourceReference.ReferenceOneofCase">
+            <summary>Enum of possible cases for the "reference" oneof.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.SourceReference.Types">
+            <summary>Container for nested types declared in the SourceReference message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.Types.JavaMethod.ClassNameFieldNumber">
+            <summary>Field number for the "class_name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.Types.JavaMethod.MethodNameFieldNumber">
+            <summary>Field number for the "method_name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.Types.JavaMethod.MethodParameterTypesFieldNumber">
+            <summary>Field number for the "method_parameter_types" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.Types.JavaStackTraceElement.ClassNameFieldNumber">
+            <summary>Field number for the "class_name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.Types.JavaStackTraceElement.MethodNameFieldNumber">
+            <summary>Field number for the "method_name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.SourceReference.Types.JavaStackTraceElement.FileNameFieldNumber">
+            <summary>Field number for the "file_name" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Source">
+             <summary>
+            *
+             A source file, typically a Gherkin document or Java/Ruby/JavaScript source code
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Source.UriFieldNumber">
+            <summary>Field number for the "uri" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Source.Uri">
+             <summary>
+            *
+             The [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
+             of the source, typically a file path relative to the root directory
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Source.DataFieldNumber">
+            <summary>Field number for the "data" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Source.Data">
+            <summary>
+            The contents of the file
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Source.MediaTypeFieldNumber">
+            <summary>Field number for the "media_type" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Source.MediaType">
+            <summary>
+            The media type of the file. Can be used to specify custom types, such as
+            text/x.cucumber.gherkin+plain
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument">
+             <summary>
+            *
+             The [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) of a Gherkin document.
+             Cucumber implementations should *not* depend on `GherkinDocument` or any of its
+             children for execution - use [Pickle](#io.cucumber.messages.Pickle) instead.
+            
+             The only consumers of `GherkinDocument` should only be formatters that produce
+             "rich" output, resembling the original Gherkin document.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.UriFieldNumber">
+            <summary>Field number for the "uri" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Uri">
+             <summary>
+            *
+             The [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
+             of the source, typically a file path relative to the root directory
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.FeatureFieldNumber">
+            <summary>Field number for the "feature" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.CommentsFieldNumber">
+            <summary>Field number for the "comments" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Comments">
+            <summary>
+            All the comments in the Gherkin document
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types">
+            <summary>Container for nested types declared in the GherkinDocument message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Comment">
+             <summary>
+            *
+             A comment in a Gherkin document
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Comment.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Comment.Location">
+            <summary>
+            The location of the comment
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Comment.TextFieldNumber">
+            <summary>Field number for the "text" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Comment.Text">
+            <summary>
+            The text of the comment
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature">
+             <summary>
+            *
+             The top level node in the AST
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Location">
+            <summary>
+            The location of the `Feature` keyword
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.TagsFieldNumber">
+            <summary>Field number for the "tags" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Tags">
+            <summary>
+            All the tags placed above the `Feature` keyword
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.LanguageFieldNumber">
+            <summary>Field number for the "language" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Language">
+            <summary>
+            The [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code of the Gherkin document
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.KeywordFieldNumber">
+            <summary>Field number for the "keyword" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Keyword">
+            <summary>
+            The text of the `Feature` keyword (in the language specified by `language`)
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Name">
+            <summary>
+            The name of the feature (the text following the `keyword`)
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.DescriptionFieldNumber">
+            <summary>Field number for the "description" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Description">
+            <summary>
+            The line(s) underneath the line with the `keyword` that are used as description
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.ChildrenFieldNumber">
+            <summary>Field number for the "children" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Children">
+            <summary>
+            Zero or more children
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types">
+            <summary>Container for nested types declared in the Feature message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Tag">
+             <summary>
+            *
+             A tag
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Tag.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Tag.Location">
+            <summary>
+            Location of the tag
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Tag.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Tag.Name">
+            <summary>
+            The name of the tag (including the leading `@`)
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Tag.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Tag.Id">
+            <summary>
+            Unique ID to be able to reference the Tag from PickleTag
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild">
+             <summary>
+            *
+             A child node of a `Feature` node
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.RuleFieldNumber">
+            <summary>Field number for the "rule" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.BackgroundFieldNumber">
+            <summary>Field number for the "background" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.ScenarioFieldNumber">
+            <summary>Field number for the "scenario" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.ValueOneofCase">
+            <summary>Enum of possible cases for the "value" oneof.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types">
+            <summary>Container for nested types declared in the FeatureChild message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule">
+             <summary>
+            *
+             A `Rule` node
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.Location">
+            <summary>
+            The location of the `Rule` keyword
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.KeywordFieldNumber">
+            <summary>Field number for the "keyword" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.DescriptionFieldNumber">
+            <summary>Field number for the "description" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.ChildrenFieldNumber">
+            <summary>Field number for the "children" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.Rule.TagsFieldNumber">
+            <summary>Field number for the "tags" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.RuleChild.BackgroundFieldNumber">
+            <summary>Field number for the "background" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.RuleChild.ScenarioFieldNumber">
+            <summary>Field number for the "scenario" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.FeatureChild.Types.RuleChild.ValueOneofCase">
+            <summary>Enum of possible cases for the "value" oneof.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Background.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Background.Location">
+            <summary>
+            The location of the `Background` keyword
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Background.KeywordFieldNumber">
+            <summary>Field number for the "keyword" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Background.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Background.DescriptionFieldNumber">
+            <summary>Field number for the "description" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Background.StepsFieldNumber">
+            <summary>Field number for the "steps" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Background.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Location">
+            <summary>
+            The location of the `Scenario` keyword
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.TagsFieldNumber">
+            <summary>Field number for the "tags" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.KeywordFieldNumber">
+            <summary>Field number for the "keyword" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.DescriptionFieldNumber">
+            <summary>Field number for the "description" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.StepsFieldNumber">
+            <summary>Field number for the "steps" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.ExamplesFieldNumber">
+            <summary>Field number for the "examples" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types">
+            <summary>Container for nested types declared in the Scenario message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.Location">
+            <summary>
+            The location of the `Examples` keyword
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.TagsFieldNumber">
+            <summary>Field number for the "tags" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.KeywordFieldNumber">
+            <summary>Field number for the "keyword" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.DescriptionFieldNumber">
+            <summary>Field number for the "description" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.TableHeaderFieldNumber">
+            <summary>Field number for the "table_header" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.TableBodyFieldNumber">
+            <summary>Field number for the "table_body" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Scenario.Types.Examples.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow">
+            <summary>
+            A row in a table
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Location">
+            <summary>
+            The location of the first cell in the row
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.CellsFieldNumber">
+            <summary>Field number for the "cells" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Cells">
+            <summary>
+            Cells in the row
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Types">
+            <summary>Container for nested types declared in the TableRow message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Types.TableCell">
+            <summary>
+            A cell in a `TableRow`
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Types.TableCell.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Types.TableCell.Location">
+            <summary>
+            The location of the cell
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Types.TableCell.ValueFieldNumber">
+            <summary>Field number for the "value" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.TableRow.Types.TableCell.Value">
+            <summary>
+            The value of the cell
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step">
+            <summary>
+            A step
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Location">
+            <summary>
+            The location of the steps' `keyword`
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.KeywordFieldNumber">
+            <summary>Field number for the "keyword" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.TextFieldNumber">
+            <summary>Field number for the "text" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.DocStringFieldNumber">
+            <summary>Field number for the "doc_string" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.DataTableFieldNumber">
+            <summary>Field number for the "data_table" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Id">
+            <summary>
+            Unique ID to be able to reference the Step from PickleStep
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.ArgumentOneofCase">
+            <summary>Enum of possible cases for the "argument" oneof.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Types">
+            <summary>Container for nested types declared in the Step message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Types.DataTable.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Types.DataTable.RowsFieldNumber">
+            <summary>Field number for the "rows" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Types.DocString.LocationFieldNumber">
+            <summary>Field number for the "location" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Types.DocString.MediaTypeFieldNumber">
+            <summary>Field number for the "media_type" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Types.DocString.ContentFieldNumber">
+            <summary>Field number for the "content" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.GherkinDocument.Types.Feature.Types.Step.Types.DocString.DelimiterFieldNumber">
+            <summary>Field number for the "delimiter" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Attachment">
+             <summary>
+            *
+             An attachment represents any kind of data associated with a line in a
+             [Source](#io.cucumber.messages.Source) file. It can be used for:
+            
+             * Syntax errors during parse time
+             * Screenshots captured and attached during execution
+             * Logs captured and attached during execution
+            
+             It is not to be used for runtime errors raised/thrown during execution. This
+             is captured in `TestResult`.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.SourceFieldNumber">
+            <summary>Field number for the "source" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.TestStepIdFieldNumber">
+            <summary>Field number for the "testStepId" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.TestCaseStartedIdFieldNumber">
+            <summary>Field number for the "test_case_started_id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.BodyFieldNumber">
+            <summary>Field number for the "body" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Attachment.Body">
+             <summary>
+            *
+             The body of the attachment. If `content_encoding` is `IDENTITY`, the attachment
+             is simply the string. If it's `BASE64`, the string should be Base64 decoded to
+             obtain the attachment.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.MediaTypeFieldNumber">
+            <summary>Field number for the "media_type" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Attachment.MediaType">
+             <summary>
+            *
+             The media type of the data. This can be any valid
+             [IANA Media Type](https://www.iana.org/assignments/media-types/media-types.xhtml)
+             as well as Cucumber-specific media types such as `text/x.cucumber.gherkin+plain`
+             and `text/x.cucumber.stacktrace+plain`
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.ContentEncodingFieldNumber">
+            <summary>Field number for the "content_encoding" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Attachment.ContentEncoding">
+             <summary>
+            *
+             Whether to interpret `body` "as-is" (IDENTITY) or if it needs to be Base64-decoded (BASE64).
+            
+             Content encoding is *not* determined by the media type, but rather by the type
+             of the object being attached:
+            
+             - string => IDENTITY
+             - byte array => BASE64
+             - stream => BASE64
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.FileNameFieldNumber">
+            <summary>Field number for the "file_name" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Attachment.FileName">
+             <summary>
+            *
+             Suggested file name of the attachment. (Provided by the user as an argument to `attach`)
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.UrlFieldNumber">
+            <summary>Field number for the "url" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Attachment.Url">
+             <summary>
+            *
+             A URL where the attachment can be retrieved. This field should not be set by Cucumber.
+             It should be set by a program that reads a message stream and does the following for
+             each Attachment message:
+            
+             - Writes the body (after base64 decoding if necessary) to a new file.
+             - Sets `body` and `content_encoding` to `null`
+             - Writes out the new attachment message
+            
+             This will result in a smaller message stream, which can improve performance and
+             reduce bandwidth of message consumers. It also makes it easier to process and download attachments
+             separately from reports.
+             </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Attachment.Types">
+            <summary>Container for nested types declared in the Attachment message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Attachment.Types.ContentEncoding.Base64">
+            <summary>
+            When this is used, the data field is a single line base64 string
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Pickle">
+             <summary>
+            *
+             A `Pickle` represents a template for a `TestCase`. It is typically derived
+             from another format, such as [GherkinDocument](#io.cucumber.messages.GherkinDocument).
+             In the future a `Pickle` may be derived from other formats such as Markdown or
+             Excel files.
+            
+             By making `Pickle` the main data structure Cucumber uses for execution, the
+             implementation of Cucumber itself becomes simpler, as it doesn't have to deal
+             with the complex structure of a [GherkinDocument](#io.cucumber.messages.GherkinDocument).
+            
+             Each `PickleStep` of a `Pickle` is matched with a `StepDefinition` to create a `TestCase`
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Id">
+             <summary>
+            *
+             A unique id for the pickle. This is a [SHA1](https://en.wikipedia.org/wiki/SHA-1) hash
+             from the source data and the `locations` of the pickle.
+             This ID will change if source the file is modified.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.UriFieldNumber">
+            <summary>Field number for the "uri" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Uri">
+            <summary>
+            The uri of the source file
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Name">
+            <summary>
+            The name of the pickle
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.LanguageFieldNumber">
+            <summary>Field number for the "language" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Language">
+            <summary>
+            The language of the pickle
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.StepsFieldNumber">
+            <summary>Field number for the "steps" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Steps">
+            <summary>
+            One or more steps
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.TagsFieldNumber">
+            <summary>Field number for the "tags" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Tags">
+             <summary>
+            *
+             One or more tags. If this pickle is constructed from a Gherkin document,
+             It includes inherited tags from the `Feature` as well.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.AstNodeIdsFieldNumber">
+            <summary>Field number for the "ast_node_ids" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.AstNodeIds">
+             <summary>
+            *
+             Points to the AST node locations of the pickle. The last one represents the unique
+             id of the pickle. A pickle constructed from `Examples` will have the first
+             id originating from the `Scenario` AST node, and the second from the `TableRow` AST node.
+             </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Pickle.Types">
+            <summary>Container for nested types declared in the Pickle message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Pickle.Types.PickleTag">
+             <summary>
+            *
+             A tag
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.Types.PickleTag.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.Types.PickleTag.AstNodeIdFieldNumber">
+            <summary>Field number for the "ast_node_id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Types.PickleTag.AstNodeId">
+            <summary>
+            Points to the AST node this was created from
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.Pickle.Types.PickleStep">
+             <summary>
+            *
+             An executable step
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.Types.PickleStep.TextFieldNumber">
+            <summary>Field number for the "text" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.Types.PickleStep.ArgumentFieldNumber">
+            <summary>Field number for the "argument" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Types.PickleStep.Argument">
+            <summary>
+            An optional argument
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.Types.PickleStep.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Types.PickleStep.Id">
+            <summary>
+            A unique ID for the PickleStep
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Pickle.Types.PickleStep.AstNodeIdsFieldNumber">
+            <summary>Field number for the "ast_node_ids" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.Pickle.Types.PickleStep.AstNodeIds">
+            <summary>
+            References the IDs of the source of the step. For Gherkin, this can be
+            the ID of a Step, and possibly also the ID of a TableRow
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.PickleStepArgument">
+             <summary>
+            *
+             A wrapper for either a doc string or a table.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.PickleStepArgument.DocStringFieldNumber">
+            <summary>Field number for the "doc_string" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.PickleStepArgument.DataTableFieldNumber">
+            <summary>Field number for the "data_table" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.PickleStepArgument.MessageOneofCase">
+            <summary>Enum of possible cases for the "message" oneof.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.PickleStepArgument.Types">
+            <summary>Container for nested types declared in the PickleStepArgument message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.PickleStepArgument.Types.PickleDocString.MediaTypeFieldNumber">
+            <summary>Field number for the "media_type" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.PickleStepArgument.Types.PickleDocString.ContentFieldNumber">
+            <summary>Field number for the "content" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.PickleStepArgument.Types.PickleTable.RowsFieldNumber">
+            <summary>Field number for the "rows" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.PickleStepArgument.Types.PickleTable.Types">
+            <summary>Container for nested types declared in the PickleTable message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.PickleStepArgument.Types.PickleTable.Types.PickleTableRow.CellsFieldNumber">
+            <summary>Field number for the "cells" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.PickleStepArgument.Types.PickleTable.Types.PickleTableRow.Types">
+            <summary>Container for nested types declared in the PickleTableRow message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.PickleStepArgument.Types.PickleTable.Types.PickleTableRow.Types.PickleTableCell.ValueFieldNumber">
+            <summary>Field number for the "value" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestCase">
+             <summary>
+            *
+             A `TestCase` contains a sequence of `TestStep`s.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.PickleIdFieldNumber">
+            <summary>Field number for the "pickle_id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCase.PickleId">
+            <summary>
+            The ID of the `Pickle` this `TestCase` is derived from.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.TestStepsFieldNumber">
+            <summary>Field number for the "test_steps" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestCase.Types">
+            <summary>Container for nested types declared in the TestCase message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestCase.Types.TestStep">
+             <summary>
+            *
+             A `TestStep` is derived from either a `PickleStep`
+             combined with a `StepDefinition`, or from a `Hook`.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.PickleStepIdFieldNumber">
+            <summary>Field number for the "pickle_step_id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCase.Types.TestStep.PickleStepId">
+            <summary>
+            Pointer to the `PickleStep` (if derived from a PickleStep)
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.StepDefinitionIdsFieldNumber">
+            <summary>Field number for the "step_definition_ids" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCase.Types.TestStep.StepDefinitionIds">
+            <summary>
+            Pointer to all the matching `StepDefinition`s (if derived from a PickleStep)
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.StepMatchArgumentsListsFieldNumber">
+            <summary>Field number for the "step_match_arguments_lists" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCase.Types.TestStep.StepMatchArgumentsLists">
+            <summary>
+            A list of list of StepMatchArgument (if derived from a `StepDefinition`).
+            Each element represents a matching step definition. A size of 0 means `UNDEFINED`,
+            and a size of 2+ means `AMBIGUOUS`
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.HookIdFieldNumber">
+            <summary>Field number for the "hook_id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCase.Types.TestStep.HookId">
+            <summary>
+            Pointer to the `Hook` (if derived from a Hook)
+            </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestCase.Types.TestStep.Types">
+            <summary>Container for nested types declared in the TestStep message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.StepMatchArgumentsFieldNumber">
+            <summary>Field number for the "step_match_arguments" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types">
+            <summary>Container for nested types declared in the StepMatchArgumentsList message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument">
+             <summary>
+            *
+             Represents a single argument extracted from a step match and passed to a step definition.
+             This is used for the following purposes:
+             - Construct an argument to pass to a step definition (possibly through a parameter type transform)
+             - Highlight the matched parameter in rich formatters such as the HTML formatter
+            
+             This message closely matches the `Argument` class in the `cucumber-expressions` library.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument.ParameterTypeNameFieldNumber">
+            <summary>Field number for the "parameter_type_name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument.GroupFieldNumber">
+            <summary>Field number for the "group" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument.Group">
+             <summary>
+            *
+             Represents the outermost capture group of an argument. This message closely matches the
+             `Group` class in the `cucumber-expressions` library.
+             </summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument.Types">
+            <summary>Container for nested types declared in the StepMatchArgument message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument.Types.Group.StartFieldNumber">
+            <summary>Field number for the "start" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument.Types.Group.ValueFieldNumber">
+            <summary>Field number for the "value" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCase.Types.TestStep.Types.StepMatchArgumentsList.Types.StepMatchArgument.Types.Group.ChildrenFieldNumber">
+            <summary>Field number for the "children" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestRunStarted.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCaseStarted.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCaseStarted.AttemptFieldNumber">
+            <summary>Field number for the "attempt" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCaseStarted.Attempt">
+             <summary>
+            *
+             The first attempt should have value 0, and for each retry the value
+             should increase by 1.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCaseStarted.TestCaseIdFieldNumber">
+            <summary>Field number for the "test_case_id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCaseStarted.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestCaseStarted.Id">
+             <summary>
+            *
+             Because a `TestCase` can be run multiple times (in case of a retry),
+             we use this field to group messages relating to the same attempt.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCaseFinished.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestCaseFinished.TestCaseStartedIdFieldNumber">
+            <summary>Field number for the "test_case_started_id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepStarted.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepStarted.TestStepIdFieldNumber">
+            <summary>Field number for the "testStepId" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepStarted.TestCaseStartedIdFieldNumber">
+            <summary>Field number for the "test_case_started_id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.TestStepResultFieldNumber">
+            <summary>Field number for the "test_step_result" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.TestStepIdFieldNumber">
+            <summary>Field number for the "testStepId" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.TestCaseStartedIdFieldNumber">
+            <summary>Field number for the "test_case_started_id" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestStepFinished.Types">
+            <summary>Container for nested types declared in the TestStepFinished message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.StatusFieldNumber">
+            <summary>Field number for the "status" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.DurationFieldNumber">
+            <summary>Field number for the "duration" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.WillBeRetriedFieldNumber">
+            <summary>Field number for the "will_be_retried" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types">
+            <summary>Container for nested types declared in the TestStepResult message type.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status">
+             <summary>
+            *
+             Status of a `TestStep`.
+            
+             The ordinal values of statuses are significant. The status of a TestCase
+             is computed by picking the status with the highest value for all of its steps.
+            
+             For example, if a TestCase has steps with statuses passed, undefined and skipped,
+             then the pickle's status is undefined.
+             </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status.Unknown">
+            <summary>
+            The step hasn't been matched or executed.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status.Passed">
+            <summary>
+            The step matched one step definition and passed execution.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status.Skipped">
+            <summary>
+            The step matched one step definition but was not executed because the
+            previous step was not PASSED.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status.Pending">
+            <summary>
+            The step matched one step definition and signalled pending during execution.
+            This is the default behaviour of generated step definitions, which either
+            throw a special PendingException, or return a special value indicating that it's
+            pending. How to signal the pending status depends on the Cucumber implementation.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status.Undefined">
+            <summary>
+            The step matched no step definitions.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status.Ambiguous">
+            <summary>
+            The step matched two or more step definitions.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestStepFinished.Types.TestStepResult.Types.Status.Failed">
+            <summary>
+            The step matched one step definition and failed execution.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestRunFinished.SuccessFieldNumber">
+            <summary>Field number for the "success" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestRunFinished.Success">
+            <summary>
+            success = StrictModeEnabled ? (failed_count == 0 &amp;&amp; ambiguous_count == 0 &amp;&amp; undefined_count == 0 &amp;&amp; pending_count == 0) : (failed_count == 0 &amp;&amp; ambiguous_count == 0)
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestRunFinished.TimestampFieldNumber">
+            <summary>Field number for the "timestamp" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestRunFinished.Timestamp">
+            <summary>
+            Timestamp when the TestRun is finished
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.TestRunFinished.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.TestRunFinished.Message">
+            <summary>
+            Error message. Can be a stack trace from a failed `BeforeAll` or `AfterAll`.
+            If there are undefined parameter types, the message is simply
+            "The following parameter type(s() are not defined: xxx, yyy".
+            The independent `UndefinedParameterType` messages can be used to generate
+            snippets for those parameter types.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Hook.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Hook.TagExpressionFieldNumber">
+            <summary>Field number for the "tag_expression" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.Hook.SourceReferenceFieldNumber">
+            <summary>Field number for the "source_reference" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.StepDefinition.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.StepDefinition.PatternFieldNumber">
+            <summary>Field number for the "pattern" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.StepDefinition.SourceReferenceFieldNumber">
+            <summary>Field number for the "source_reference" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.StepDefinition.Types">
+            <summary>Container for nested types declared in the StepDefinition message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.StepDefinition.Types.StepDefinitionPattern.SourceFieldNumber">
+            <summary>Field number for the "source" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.StepDefinition.Types.StepDefinitionPattern.TypeFieldNumber">
+            <summary>Field number for the "type" field.</summary>
+        </member>
+        <member name="T:Io.Cucumber.Messages.StepDefinition.Types.StepDefinitionPattern.Types">
+            <summary>Container for nested types declared in the StepDefinitionPattern message type.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.ParameterType.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="P:Io.Cucumber.Messages.ParameterType.Name">
+            <summary>
+            The name is unique, so we don't need an id.
+            </summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.ParameterType.RegularExpressionsFieldNumber">
+            <summary>Field number for the "regular_expressions" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.ParameterType.PreferForRegularExpressionMatchFieldNumber">
+            <summary>Field number for the "prefer_for_regular_expression_match" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.ParameterType.UseForSnippetsFieldNumber">
+            <summary>Field number for the "use_for_snippets" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.ParameterType.IdFieldNumber">
+            <summary>Field number for the "id" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.UndefinedParameterType.NameFieldNumber">
+            <summary>Field number for the "name" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.UndefinedParameterType.ExpressionFieldNumber">
+            <summary>Field number for the "expression" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.ParseError.SourceFieldNumber">
+            <summary>Field number for the "source" field.</summary>
+        </member>
+        <member name="F:Io.Cucumber.Messages.ParseError.MessageFieldNumber">
+            <summary>Field number for the "message" field.</summary>
+        </member>
+    </members>
+</doc>
