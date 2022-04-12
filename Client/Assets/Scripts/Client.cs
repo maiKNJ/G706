@@ -51,6 +51,7 @@ public class Client : MonoBehaviour
 
         isConnected = true;
         tcp.Connect();
+        //Why not udp.Connect()????
     }
 
     public class TCP

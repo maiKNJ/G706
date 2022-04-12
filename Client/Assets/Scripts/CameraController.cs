@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Should be put into the server side, and edited to be data coming from ARcore to control the camera
 public class CameraController : MonoBehaviour
 {
     public PlayerManager player;
@@ -25,6 +26,7 @@ public class CameraController : MonoBehaviour
 
     private void Look()
     {
+        //The variables should be changed to be input from ARcore
         float _mouseVertical = -Input.GetAxis("Mouse Y");
         float _mouseHorizontal = Input.GetAxis("Mouse X");
 
